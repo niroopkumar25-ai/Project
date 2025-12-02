@@ -1,0 +1,181 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Scientific Calculator UI (Design Only)</title>
+
+<style>
+
+/* Page Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #444, #111);
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Calculator Body */
+.calculator {
+    width: 500px;
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+    border: 2px solid #333;
+}
+
+/* Screen Display */
+.display {
+    width: 100%;
+    height: 85px;
+    background: #000;
+    color: #15ff00;
+    font-size: 42px;
+    text-align: right;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 2px solid #444;
+    box-sizing: border-box;
+    font-family: monospace;
+    user-select: none;
+}
+
+/* Button Grid */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+/* Button Base Style */
+button {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #2a2a2a;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 0px #111;
+    transition: 0.15s;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 1px 0px #111;
+}
+
+/* Special Styles */
+.op-btn {
+    background: #3b3b3b;
+}
+
+.orange-btn {
+    background: #ff9500;
+    color: #000;
+    font-weight: bold;
+}
+
+.blue-btn {
+    background: #007aff;
+    font-weight: bold;
+}
+
+.gray-btn {
+    background: #4d4d4d;
+}
+
+.top-btn {
+    background: #555;
+}
+
+.theme-btn {
+    grid-column: span 6;
+    background: #333;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="calculator">
+
+    <!-- Display -->
+    <div class="display">0</div>
+
+    
+
+    <div class="btn-container">
+
+        <!-- Row 1 -->
+        <button class="gray-btn">MC</button>
+        <button class="gray-btn">MR</button>
+        <button class="gray-btn">M+</button>
+        <button class="gray-btn">M–</button>
+        <button class="op-btn">(</button>
+        <button class="op-btn">)</button>
+
+        <!-- Row 2 -->
+        <button class="op-btn">sin</button>
+        <button class="op-btn">cos</button>
+        <button class="op-btn">tan</button>
+        <button class="op-btn">cot</button>
+        <button class="op-btn">sec</button>
+        <button class="op-btn">csc</button>
+
+        <!-- Row 3 -->
+        <button class="op-btn">ln</button>
+        <button class="op-btn">log</button>
+        <button class="op-btn">exp</button>
+        <button class="op-btn">√</button>
+        <button class="op-btn">x²</button>
+        <button class="op-btn">xⁿ</button>
+
+        <!-- Row 4 -->
+        <button class="op-btn">π</button>
+        <button class="op-btn">e</button>
+        <button class="op-btn">%</button>
+        <button class="op-btn">!</button>
+        <button class="op-btn">Ans</button>
+        <button class="orange-btn">÷</button>
+
+        <!-- Row 5 -->
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="orange-btn">×</button>
+        <button class="blue-btn">DEG</button>
+        <button class="blue-btn">RAD</button>
+
+        <!-- Row 6 -->
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="orange-btn">−</button>
+        <button class="gray-btn">x^y</button>
+        <button class="gray-btn">x/2</button>
+
+        <!-- Row 7 -->
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="orange-btn">+</button>
+        <button class="gray-btn">RND</button>
+        <button class="gray-btn">ABS</button>
+
+        <!-- Row 8 -->
+        <button>0</button>
+        <button>00</button>
+        <button>.</button>
+        <button class="gray-btn">DEL</button>
+        <button class="gray-btn">AC</button>
+        <button class="orange-btn">=</button>
+    </div>
+</div>
+</body>
+</html>
